@@ -1,9 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import {
   FormGroup,
-  FormControl,
   FormBuilder,
-  Validators
 } from '@angular/forms';
 
 import { PAGES, employeeForm } from './standard-input-form.constants';
@@ -27,7 +25,7 @@ export class StandardInputFormComponent implements OnInit, OnChanges {
 
   ngOnChanges() {}
 
-  private switchPage(page: PAGES) {
+  public switchPage(page: PAGES) {
     this.currentPage = page;
   }
 
