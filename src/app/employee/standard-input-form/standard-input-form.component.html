@@ -1,357 +1,334 @@
 <div class="container">
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">First Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="First Name">
+    <form *ngIf="currentPage === PAGES.PERSONAL" [formGroup]="personalForm">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">First Name</label>
+                <div class="control">
+                    <input formControlName="firsName" class="input" type="text" placeholder="First Name">
+                </div>
             </div>
-        </div>
-
-        <div class="field column">
-            <label class="label">Middle Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Middle Name">
+            <div class="field column">
+                <label class="label">Middle Name</label>
+                <div class="control">
+                    <input formControlName="middleName" class="input" type="text" placeholder="Middle Name">
+                </div>
             </div>
-        </div>
-
-        <div class="field column">
-            <label class="label">Last Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Last Name">
-            </div>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Date of joining</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="Date of joining">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Date of Birth</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="Date of Birth">
-            </div>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Aadhar Card Number</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Aadhar number">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Name on Aadhar</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Name on Aadhar">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Date of Birth (As per Aadhar)</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="Date of Birth">
-            </div>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">PAN Card Number</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="PAN">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Name on PAN Card</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Name on PAN">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">UAN</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="UAN">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Passport Number</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Passport number">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Name on Passport</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Name on Passport">
-            </div>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Personal Email id</label>
-            <p class="control has-icons-left">
-                <input class="input" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-            </p>
-        </div>
-        <div class="field column">
-            <label class="label">Contact Number</label>
-            <p class="control has-icons-left">
-                <input class="input" type="number" placeholder="Mobile">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-mobile"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Blood Group</label>
-            <div class="control">
-                <div class="select">
-                    <select>
-                        <option value="">-Select Blood Group-</option>
-                        <option>A Positive</option>
-                        <option>A Negative</option>
-                        <option>A Unknown</option>
-                        <option>B Positive</option>
-                        <option>B Negative</option>
-                        <option>B Unknown</option>
-                        <option>AB Positive</option>
-                        <option>AB Negative</option>
-                        <option>AB Unknown</option>
-                        <option>O Positive</option>
-                        <option>O Negative</option>
-                        <option>O Unknown</option>
-                        <option>Unknown</option>
-                    </select>
+            <div class="field column">
+                <label class="label">Last Name</label>
+                <div class="control">
+                    <input formControlName="lastName" class="input" type="text" placeholder="Last Name">
                 </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Marital Status</label>
-            <div class="control">
-                <div class="select">
-                    <select>
-                        <option value="">-Select Marital Status-</option>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Widowed">Widowed</option>
-                        <option value="Separated">Separated</option>
-                        <option value="Divorced">Divorced</option>
-                    </select>
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Date of joining</label>
+                <div class="control">
+                    <input formControlName="dateOfJoin" class="input" type="Date" placeholder="Date of joining">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Date of Birth</label>
+                <div class="control">
+                    <input formControlName="dateOfBirth" class="input" type="Date" placeholder="Date of Birth">
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Father's Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Father's Name">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Aadhar Card Number</label>
+                <div class="control">
+                    <input formControlName="aadharNumber" class="input" type="text" placeholder="Aadhar number">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Name on Aadhar</label>
+                <div class="control">
+                    <input formControlName="nameOnAdhar" class="input" type="text" placeholder="Name on Aadhar">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Date of Birth (As per Aadhar)</label>
+                <div class="control">
+                    <input formControlName="aadharDob" class="input" type="Date" placeholder="Date of Birth">
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Father's Contact Number</label>
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Father's Number">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Spouse's Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Spouse's Name">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">PAN Card Number</label>
+                <div class="control">
+                    <input formControlName="pancardNumber" class="input" type="text" placeholder="PAN">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Name on PAN Card</label>
+                <div class="control">
+                    <input formControlName="nameOnPancard" class="input" type="text" placeholder="Name on PAN">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">UAN</label>
+                <div class="control">
+                    <input formControlName="uan" class="input" type="text" placeholder="UAN">
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Spouse's Contact Number</label>
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Spouse's Number">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Emergency Contact Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Emergency Contact Name">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Passport Number</label>
+                <div class="control">
+                    <input formControlName="passportNumber" class="input" type="text" placeholder="Passport number">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Name on Passport</label>
+                <div class="control">
+                    <input formControlName="nameOnPassport" class="input" type="text" placeholder="Name on Passport">
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Emergency contact Relationship</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Relationship">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Personal Email id</label>
+                <p class="control has-icons-left">
+                    <input formControlName="personalEmail" class="input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field column">
+                <label class="label">Contact Number</label>
+                <p class="control has-icons-left">
+                    <input formControlName="contactNumber" class="input" type="number" placeholder="Mobile">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-mobile"></i>
+                    </span>
+                </p>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Emergency Contact Number</label>
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Emergency Contact Number">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Permanent Address</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="Permanent Address"></textarea>
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Blood Group</label>
+                <div class="control">
+                    <div class="select">
+                        <select formControlName="bloodGroup">
+                            <option value="">-Select Blood Group-</option>
+                            <option>A Positive</option>
+                            <option>A Negative</option>
+                            <option>A Unknown</option>
+                            <option>B Positive</option>
+                            <option>B Negative</option>
+                            <option>B Unknown</option>
+                            <option>AB Positive</option>
+                            <option>AB Negative</option>
+                            <option>AB Unknown</option>
+                            <option>O Positive</option>
+                            <option>O Negative</option>
+                            <option>O Unknown</option>
+                            <option>Unknown</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Marital Status</label>
+                <div class="control">
+                    <div class="select">
+                        <select formControlName="maritalStatus">
+                            <option value="">-Select Marital Status-</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Divorced">Divorced</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Prominent Landmark</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Landmark">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Father's Name</label>
+                <div class="control">
+                    <input formControlName="fathersName" class="input" type="text" placeholder="Father's Name">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Father's Contact Number</label>
+                <p class="control has-icons-left">
+                    <input formControlName="fathersNumber" class="input" type="text" placeholder="Father's Number">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </p>
             </div>
         </div>
-    </div>
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Spouse's Name</label>
+                <div class="control">
+                    <input formControlName="spouseName" class="input" type="text" placeholder="Spouse's Name">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Spouse's Contact Number</label>
+                <p class="control has-icons-left">
+                    <input formControlName="spouseNumber" class="input" type="text" placeholder="Spouse's Number">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Emergency Contact Name</label>
+                <div class="control">
+                    <input formControlName="emergencyContactName" class="input" type="text" placeholder="Emergency Contact Name">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Emergency contact Relationship</label>
+                <div class="control">
+                    <input formControlName="emergencyContactRelationship" class="input" type="text" placeholder="Relationship">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Emergency Contact Number</label>
+                <p class="control has-icons-left">
+                    <input formControlName="emergencyContactNumber" class="input" type="text" placeholder="Emergency Contact Number">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Permanent Address</label>
+                <div class="control">
+                    <textarea formControlName="permenentAddress" class="textarea" placeholder="Permanent Address"></textarea>
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Prominent Landmark</label>
+                <div class="control">
+                    <input formControlName="permenentAddressLandmark" class="input" type="text" placeholder="Landmark">
+                </div>
+            </div>
+        </div>
+    </form>
 
     <!-- start pf Employment Data -->
 
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Employer Name and Full Address</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="Namd and address"></textarea>
+    <form *ngIf="currentPage === PAGES.EMPLOYMENT" [formGroup]="personalForm">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Employer Name and Full Address</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Name and address"></textarea>
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Office Landline Numbers</label>
+
+                <p class="control has-icons-left">
+                    <input formControlName="" class="input" type="text" placeholder="Landline Numbers">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </p>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Office Landline Numbers</label>
-
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Landline Numbers">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Date of joining</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="Date of joining">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Date of joining</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="Date" placeholder="Date of joining">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">End Date</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="Date" placeholder="End date">
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">End Date</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="End date">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Job Title / Designation</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Job Title">
+                </div>
+            </div>
+
+            <div class="field column">
+                <label class="label">Gross Salary</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Gross Salary">
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Job Title / Designation</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Job Title">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Supervisor Name</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Supervisor Name">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Supervisor Contact Number</label>
+                <p class="control has-icons-left">
+                    <input formControlName="" class="input" type="text" placeholder="Supervisor Number">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </p>
             </div>
         </div>
-
-        <div class="field column">
-            <label class="label">Gross Salary</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Gross Salary">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Reason for Leaving</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Job Title">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Employee Code</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Employee Code">
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Supervisor Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Supervisor Name">
+        <div class="columns">
+            <div class="field column">
+                <label class="label">Highest Qualification</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="text" placeholder="Aadhar number">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Career Start Date</label>
+                <div class="control">
+                    <input formControlName="" class="input" type="Date" placeholder="Career Start Date">
+                </div>
             </div>
         </div>
-        <div class="field column">
-            <label class="label">Supervisor Contact Number</label>
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="Supervisor Number">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                </span>
-            </p>
-        </div>
-    </div>
-
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Reason for Leaving</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Job Title">
-            </div>
-        </div>
-
-        <div class="field column">
-            <label class="label">Employee Code</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Employee Code">
-            </div>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="field column">
-            <label class="label">Highest Qualification</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Aadhar number">
-            </div>
-        </div>
-        <div class="field column">
-            <label class="label">Career Start Date</label>
-            <div class="control">
-                <input class="input" type="Date" placeholder="Career Start Date">
-            </div>
-        </div>
-    </div>
-
+    </form>
     <!-- start pf Employment Data -->
-
-
     <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
         <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
         <a class="pagination-next">Next page</a>
         <ul class="pagination-list">
             <li>
-                <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+                <a (click)="switchPage(PAGES.PERSONAL)" [ngClass]="{'is-current': currentPage === PAGES.PERSONAL}"
+                    class="pagination-link" aria-label="Page 1" aria-current="page">Personal Data</a>
             </li>
             <li>
-                <a class="pagination-link" aria-label="Goto page 2">2</a>
-            </li>
-            <li>
-                <a class="pagination-link" aria-label="Goto page 3">3</a>
+                <a (click)="switchPage(PAGES.EMPLOYMENT)" [ngClass]="{'is-current': currentPage === PAGES.EMPLOYMENT}"
+                    class="pagination-link" aria-label="Goto page 2">Employment Data</a>
             </li>
         </ul>
     </nav>
