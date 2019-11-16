@@ -20,7 +20,7 @@ export class StandardInputFormComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.initForm();
-    setInterval(() => console.log(this.personalForm.value), 2000);
+    // setInterval(() => console.log(this.personalForm.value), 2000);
   }
 
   ngOnChanges() {}

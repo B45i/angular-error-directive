@@ -3,9 +3,12 @@
         <div class="columns">
             <div class="field column">
                 <label class="label">First Name</label>
-                <div class="control">
+                <div appErrorContainer class="control">
                     <input appErrorDisplay formControlName="firsName" class="input" type="text" placeholder="First Name">
                 </div>
+                <!-- <p class="help is-danger">This email is invalid</p> -->
+
+                <!-- <app-error-message [errors]="personalForm.get('firsName').errors"></app-error-message> -->
             </div>
             <div class="field column">
                 <label class="label">Middle Name</label>
