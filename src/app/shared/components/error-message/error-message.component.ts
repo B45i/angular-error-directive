@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-error-message',
@@ -6,12 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./error-message.component.css']
 })
 export class ErrorMessageComponent implements OnInit {
+  constructor() {}
 
-  @Input() errors: any;
-  constructor() { }
-
-  ngOnInit() {
-    console.log(`Form ctrl: ${this.errors}`);
-  }
-
+  ngOnInit() {}
 }
